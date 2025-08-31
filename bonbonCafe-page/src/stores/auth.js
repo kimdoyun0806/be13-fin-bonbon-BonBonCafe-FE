@@ -76,6 +76,7 @@ export const useAuthStore = defineStore('auth', () => {
         } catch (error) {
             // 로그인 실패 처리 -> 에러 핸들링
             if (error.response.data.code === 400) {
+                console.log(response);
                 alert(error.response.data.message);
             } else {
                 // 401 이외의 오류 발생 시 일반적인 에러 메시지 표시
